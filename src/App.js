@@ -5,30 +5,32 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <nav className="pt-8 px-8">
-        <div className="w-full flex justify-between items-center">
-          <button 
-            onClick={() => setCurrentPage('home')}
-            className="text-xl font-bold hover:text-gray-600"
-          >
-            VETINARI
-          </button>
-          <div className="space-x-6">
+      <div className="w-full bg-black text-white">  {/* Added black banner */}
+        <nav className="pt-6 pb-6 px-8">  {/* Adjusted padding */}
+          <div className="w-full flex justify-between items-center">
             <button 
-              onClick={() => setCurrentPage('about')}
-              className="text-gray-600 hover:text-gray-800"
+              onClick={() => setCurrentPage('home')}
+              className="text-xl font-bold hover:text-gray-300"
             >
-              About
+              VETINARI
             </button>
-            <button 
-              onClick={() => setCurrentPage('team')}
-              className="text-gray-600 hover:text-gray-800"
-            >
-              Team
-            </button>
+            <div className="space-x-6">
+              <button 
+                  onClick={() => setCurrentPage('about')}
+                  className="text-white hover:text-gray-300"
+                >
+                  About
+              </button>
+                <button 
+                  onClick={() => setCurrentPage('team')}
+                  className="text-white hover:text-gray-300"
+                >
+                  Team
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
 
       <main>
         {currentPage === 'home' && (
